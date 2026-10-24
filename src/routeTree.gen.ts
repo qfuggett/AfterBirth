@@ -19,11 +19,13 @@ import { Route as SupportRouteImport } from './routes/support'
 import { Route as CareIndexRouteImport } from './routes/care.index'
 import { Route as CareResourceIdRouteImport } from './routes/care.$resourceId'
 import { Route as CareNewRouteImport } from './routes/care.new'
+import { Route as CareVoiceRouteImport } from './routes/care.voice'
 import { Route as QuestionsIndexRouteImport } from './routes/questions.index'
 import { Route as QuestionsQuestionIdRouteImport } from './routes/questions.$questionId'
 import { Route as QuestionsNewRouteImport } from './routes/questions.new'
 import { Route as SectionsSectionIdRouteImport } from './routes/sections.$sectionId'
 import { Route as TopicsTopicIdRouteImport } from './routes/topics.$topicId'
+import { Route as CareNotesNoteIdRouteImport } from './routes/care.notes.$noteId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -75,6 +77,11 @@ const CareNewRoute = CareNewRouteImport.update({
   path: '/care/new',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CareVoiceRoute = CareVoiceRouteImport.update({
+  id: '/care/voice',
+  path: '/care/voice',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QuestionsIndexRoute = QuestionsIndexRouteImport.update({
   id: '/questions/',
   path: '/questions/',
@@ -100,6 +107,11 @@ const TopicsTopicIdRoute = TopicsTopicIdRouteImport.update({
   path: '/topics/$topicId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CareNotesNoteIdRoute = CareNotesNoteIdRouteImport.update({
+  id: '/care/notes/$noteId',
+  path: '/care/notes/$noteId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -111,12 +123,14 @@ export interface FileRoutesByFullPath {
   '/support': typeof SupportRoute
   '/care/$resourceId': typeof CareResourceIdRoute
   '/care/new': typeof CareNewRoute
+  '/care/voice': typeof CareVoiceRoute
   '/questions/$questionId': typeof QuestionsQuestionIdRoute
   '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
   '/care/': typeof CareIndexRoute
   '/questions/': typeof QuestionsIndexRoute
+  '/care/notes/$noteId': typeof CareNotesNoteIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -128,12 +142,14 @@ export interface FileRoutesByTo {
   '/support': typeof SupportRoute
   '/care/$resourceId': typeof CareResourceIdRoute
   '/care/new': typeof CareNewRoute
+  '/care/voice': typeof CareVoiceRoute
   '/questions/$questionId': typeof QuestionsQuestionIdRoute
   '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
   '/care': typeof CareIndexRoute
   '/questions': typeof QuestionsIndexRoute
+  '/care/notes/$noteId': typeof CareNotesNoteIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -146,12 +162,14 @@ export interface FileRoutesById {
   '/support': typeof SupportRoute
   '/care/$resourceId': typeof CareResourceIdRoute
   '/care/new': typeof CareNewRoute
+  '/care/voice': typeof CareVoiceRoute
   '/questions/$questionId': typeof QuestionsQuestionIdRoute
   '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
   '/care/': typeof CareIndexRoute
   '/questions/': typeof QuestionsIndexRoute
+  '/care/notes/$noteId': typeof CareNotesNoteIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -165,12 +183,14 @@ export interface FileRouteTypes {
     | '/support'
     | '/care/$resourceId'
     | '/care/new'
+    | '/care/voice'
     | '/questions/$questionId'
     | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
     | '/care/'
     | '/questions/'
+    | '/care/notes/$noteId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -182,12 +202,14 @@ export interface FileRouteTypes {
     | '/support'
     | '/care/$resourceId'
     | '/care/new'
+    | '/care/voice'
     | '/questions/$questionId'
     | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
     | '/care'
     | '/questions'
+    | '/care/notes/$noteId'
   id:
     | '__root__'
     | '/'
@@ -199,12 +221,14 @@ export interface FileRouteTypes {
     | '/support'
     | '/care/$resourceId'
     | '/care/new'
+    | '/care/voice'
     | '/questions/$questionId'
     | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
     | '/care/'
     | '/questions/'
+    | '/care/notes/$noteId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -217,12 +241,14 @@ export interface RootRouteChildren {
   SupportRoute: typeof SupportRoute
   CareResourceIdRoute: typeof CareResourceIdRoute
   CareNewRoute: typeof CareNewRoute
+  CareVoiceRoute: typeof CareVoiceRoute
   QuestionsQuestionIdRoute: typeof QuestionsQuestionIdRoute
   QuestionsNewRoute: typeof QuestionsNewRoute
   SectionsSectionIdRoute: typeof SectionsSectionIdRoute
   TopicsTopicIdRoute: typeof TopicsTopicIdRoute
   CareIndexRoute: typeof CareIndexRoute
   QuestionsIndexRoute: typeof QuestionsIndexRoute
+  CareNotesNoteIdRoute: typeof CareNotesNoteIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -297,6 +323,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CareNewRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/care/voice': {
+      id: '/care/voice'
+      path: '/care/voice'
+      fullPath: '/care/voice'
+      preLoaderRoute: typeof CareVoiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/questions/': {
       id: '/questions/'
       path: '/questions'
@@ -332,6 +365,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TopicsTopicIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/care/notes/$noteId': {
+      id: '/care/notes/$noteId'
+      path: '/care/notes/$noteId'
+      fullPath: '/care/notes/$noteId'
+      preLoaderRoute: typeof CareNotesNoteIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -345,12 +385,14 @@ const rootRouteChildren: RootRouteChildren = {
   SupportRoute: SupportRoute,
   CareResourceIdRoute: CareResourceIdRoute,
   CareNewRoute: CareNewRoute,
+  CareVoiceRoute: CareVoiceRoute,
   QuestionsQuestionIdRoute: QuestionsQuestionIdRoute,
   QuestionsNewRoute: QuestionsNewRoute,
   SectionsSectionIdRoute: SectionsSectionIdRoute,
   TopicsTopicIdRoute: TopicsTopicIdRoute,
   CareIndexRoute: CareIndexRoute,
   QuestionsIndexRoute: QuestionsIndexRoute,
+  CareNotesNoteIdRoute: CareNotesNoteIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
