@@ -17,6 +17,7 @@ import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as SupportRouteImport } from './routes/support'
 import { Route as CareIndexRouteImport } from './routes/care.index'
+import { Route as CareResourceIdRouteImport } from './routes/care.$resourceId'
 import { Route as CareNewRouteImport } from './routes/care.new'
 import { Route as QuestionsIndexRouteImport } from './routes/questions.index'
 import { Route as QuestionsQuestionIdRouteImport } from './routes/questions.$questionId'
@@ -64,6 +65,11 @@ const CareIndexRoute = CareIndexRouteImport.update({
   path: '/care/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CareResourceIdRoute = CareResourceIdRouteImport.update({
+  id: '/care/$resourceId',
+  path: '/care/$resourceId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CareNewRoute = CareNewRouteImport.update({
   id: '/care/new',
   path: '/care/new',
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/support': typeof SupportRoute
+  '/care/$resourceId': typeof CareResourceIdRoute
   '/care/new': typeof CareNewRoute
   '/questions/$questionId': typeof QuestionsQuestionIdRoute
   '/questions/new': typeof QuestionsNewRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/support': typeof SupportRoute
+  '/care/$resourceId': typeof CareResourceIdRoute
   '/care/new': typeof CareNewRoute
   '/questions/$questionId': typeof QuestionsQuestionIdRoute
   '/questions/new': typeof QuestionsNewRoute
@@ -136,6 +144,7 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/support': typeof SupportRoute
+  '/care/$resourceId': typeof CareResourceIdRoute
   '/care/new': typeof CareNewRoute
   '/questions/$questionId': typeof QuestionsQuestionIdRoute
   '/questions/new': typeof QuestionsNewRoute
@@ -154,6 +163,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/support'
+    | '/care/$resourceId'
     | '/care/new'
     | '/questions/$questionId'
     | '/questions/new'
@@ -170,6 +180,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/support'
+    | '/care/$resourceId'
     | '/care/new'
     | '/questions/$questionId'
     | '/questions/new'
@@ -186,6 +197,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/support'
+    | '/care/$resourceId'
     | '/care/new'
     | '/questions/$questionId'
     | '/questions/new'
@@ -203,6 +215,7 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   SourcesRoute: typeof SourcesRoute
   SupportRoute: typeof SupportRoute
+  CareResourceIdRoute: typeof CareResourceIdRoute
   CareNewRoute: typeof CareNewRoute
   QuestionsQuestionIdRoute: typeof QuestionsQuestionIdRoute
   QuestionsNewRoute: typeof QuestionsNewRoute
@@ -270,6 +283,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CareIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/care/$resourceId': {
+      id: '/care/$resourceId'
+      path: '/care/$resourceId'
+      fullPath: '/care/$resourceId'
+      preLoaderRoute: typeof CareResourceIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/care/new': {
       id: '/care/new'
       path: '/care/new'
@@ -323,6 +343,7 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   SourcesRoute: SourcesRoute,
   SupportRoute: SupportRoute,
+  CareResourceIdRoute: CareResourceIdRoute,
   CareNewRoute: CareNewRoute,
   QuestionsQuestionIdRoute: QuestionsQuestionIdRoute,
   QuestionsNewRoute: QuestionsNewRoute,
