@@ -148,13 +148,13 @@ describe("Gemma 4 reply handling", () => {
   });
   it("uses Gemma 4 31B by default", async () => {
     const { readGemmaConfig } = await import("@/lib/gemma.server");
-    const prev = { key: process.env.GEMMA_API_KEY, model: process.env.GEMMA_MODEL };
-    process.env.GEMMA_API_KEY = "test";
-    delete process.env.GEMMA_MODEL;
+    const prev = { key: process.env["GEMMA_API_KEY"], model: process.env["GEMMA_MODEL"] };
+    process.env["GEMMA_API_KEY"] = "test";
+    delete process.env["GEMMA_MODEL"];
     expect(readGemmaConfig()?.model).toBe("gemma-4-31b-it");
-    process.env.GEMMA_API_KEY = prev.key;
-    if (prev.model) process.env.GEMMA_MODEL = prev.model;
-    if (!prev.key) delete process.env.GEMMA_API_KEY;
+    process.env["GEMMA_API_KEY"] = prev.key;
+    if (prev.model) process.env["GEMMA_MODEL"] = prev.model;
+    if (!prev.key) delete process.env["GEMMA_API_KEY"];
   });
 });
 
