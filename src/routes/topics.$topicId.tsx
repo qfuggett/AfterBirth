@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { BackLink, DraftNotice, Illustration, OriginTag, Page } from "@/components/app/bits";
 import { SourceList } from "@/components/app/SourceList";
 import { Button } from "@/components/ui/button";
-import { GUIDE_SECTIONS, getTopic, type Topic } from "@/content/topics";
+import { GUIDE_SECTIONS, getTopic } from "@/content/topics";
 import { IMAGES } from "@/lib/images";
 import { usePrefs } from "@/lib/prefs";
 import { useSpeech } from "@/lib/hooks";
@@ -282,4 +282,3 @@ function Detail({ id, title, active, children }: { id: string; title: string; ac
   );
 }
 
-export type { Topic };

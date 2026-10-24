@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AskRouteImport } from './routes/ask'
+import { Route as FindCareRouteImport } from './routes/find-care'
 import { Route as HelpRouteImport } from './routes/help'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SourcesRouteImport } from './routes/sources'
@@ -40,6 +41,11 @@ const AboutRoute = AboutRouteImport.update({
 const AskRoute = AskRouteImport.update({
   id: '/ask',
   path: '/ask',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FindCareRoute = FindCareRouteImport.update({
+  id: '/find-care',
+  path: '/find-care',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HelpRoute = HelpRouteImport.update({
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ask': typeof AskRoute
+  '/find-care': typeof FindCareRoute
   '/help': typeof HelpRoute
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
@@ -136,6 +143,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ask': typeof AskRoute
+  '/find-care': typeof FindCareRoute
   '/help': typeof HelpRoute
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ask': typeof AskRoute
+  '/find-care': typeof FindCareRoute
   '/help': typeof HelpRoute
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
@@ -177,6 +186,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ask'
+    | '/find-care'
     | '/help'
     | '/settings'
     | '/sources'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ask'
+    | '/find-care'
     | '/help'
     | '/settings'
     | '/sources'
@@ -215,6 +226,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ask'
+    | '/find-care'
     | '/help'
     | '/settings'
     | '/sources'
@@ -235,6 +247,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AskRoute: typeof AskRoute
+  FindCareRoute: typeof FindCareRoute
   HelpRoute: typeof HelpRoute
   SettingsRoute: typeof SettingsRoute
   SourcesRoute: typeof SourcesRoute
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       path: '/ask'
       fullPath: '/ask'
       preLoaderRoute: typeof AskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/find-care': {
+      id: '/find-care'
+      path: '/find-care'
+      fullPath: '/find-care'
+      preLoaderRoute: typeof FindCareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/help': {
@@ -379,6 +399,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AskRoute: AskRoute,
+  FindCareRoute: FindCareRoute,
   HelpRoute: HelpRoute,
   SettingsRoute: SettingsRoute,
   SourcesRoute: SourcesRoute,
