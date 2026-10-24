@@ -17,7 +17,7 @@ export function HospitalSelect({ id = "hospital-select", className }: { id?: str
         }}
         className="h-11 w-full min-w-0 appearance-none truncate rounded-full border border-border bg-paper pl-4 pr-9 text-[0.95rem] font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
-        <option value="">Choose your Detroit-area hospital</option>
+        <option value="">Choose your hospital (Detroit area)</option>
         {HOSPITAL_GROUPS.map((g) => (
           <optgroup key={g.label} label={g.label}>
             {g.hospitals.map((h) => (

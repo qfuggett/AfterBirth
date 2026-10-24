@@ -21,3 +21,5 @@
 - Find care uses Google Places when GOOGLE_MAPS_API_KEY is set, otherwise the free NPPES registry + Census geocoder; never fabricate providers, and categories without real directory data return no results.
 - Leaflet is loaded via React.lazy behind ClientOnly (`src/components/app/CareMap.tsx`).
 - Safety rules are covered by `src/test/safety-rules.test.ts`; update it when changing those rules.
+- Detroit-area hospital phone numbers live in `src/content/hospitals.ts`; only numbers confirmed on the hospital's own website are listed (tested in safety-rules), and the chosen hospital is an on-device preference.
+- Gemma 4 models reply with "thought" parts; `gemma.server.ts` requests minimal thinking and keeps only answer parts so reasoning text never reaches validation or users.
