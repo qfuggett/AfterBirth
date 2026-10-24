@@ -6,6 +6,8 @@ export type Prefs = {
   birth: "vaginal" | "cesarean" | "nicu" | "difficult" | "loss" | "skip" | null;
   role: "birth-parent" | "partner" | "support" | "skip" | null;
   hospital: HospitalId | null;
+  /** Specific Detroit-area hospital (id from src/content/hospitals.ts). */
+  hospitalSite: string | null;
   lastTopicId: string | null;
   dismissedIntro: boolean;
 };
@@ -16,6 +18,7 @@ const DEFAULTS: Prefs = {
   birth: null,
   role: null,
   hospital: null,
+  hospitalSite: null,
   lastTopicId: null,
   dismissedIntro: false,
 };
