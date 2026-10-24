@@ -8,3 +8,16 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+# Project rules
+
+- Guide content lives in `src/content/` (catalog.json is the imported research catalog; topic-content.ts holds draft summaries). Never mark content clinically reviewed; publication status comes from the catalog.
+- Guide search/navigation must never generate medical text: Gemma only returns a validated topic/section id (`src/lib/route-validation.ts`); unknown ids and URLs are rejected.
+- All AI calls go through `src/lib/gemma.server.ts`, configured by GEMMA_API_KEY / GEMMA_MODEL / GEMMA_API_BASE / GEMMA_API_FORMAT; the model id must contain "gemma" so no other model family is silently substituted.
+- AI output about personal documents/notes must pass `src/lib/assist-validation.ts` (quotes must exist in the source, numbers must be preserved, otherwise fall back to original wording).
+- Urgent help content is predefined (`src/content/help.ts`) and always reachable without AI; urgent heuristics (`src/lib/urgent.ts`) only decide whether to lead with it.
+- Personal files, notes, questions and reminders are stored only in IndexedDB (`src/lib/db.ts`); never in localStorage and never uploaded. Deleting a resource cascades to its reminders.
+- Text in photos is read on-device with tesseract.js, lazy-imported from event handlers only (never SSR).
+- Find care uses Google Places when GOOGLE_MAPS_API_KEY is set, otherwise the free NPPES registry + Census geocoder; never fabricate providers, and categories without real directory data return no results.
+- Leaflet is loaded via React.lazy behind ClientOnly (`src/components/app/CareMap.tsx`).
+- Safety rules are covered by `src/test/safety-rules.test.ts`; update it when changing those rules.

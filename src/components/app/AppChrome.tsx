@@ -19,7 +19,7 @@ export function TopBar() {
           <span aria-hidden className="grid h-9 w-9 place-items-center rounded-full bg-primary-soft font-display text-lg font-semibold text-accent-foreground">
             a
           </span>
-          <span className="font-display text-xl font-semibold tracking-tight">After Birth</span>
+          <span className="whitespace-nowrap font-display text-lg font-semibold tracking-tight sm:text-xl">After Birth</span>
         </Link>
         <Link
           to="/settings"
@@ -31,7 +31,7 @@ export function TopBar() {
         <Link
           to="/help"
           aria-current={onHelp ? "page" : undefined}
-          className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-urgent px-4 text-[0.95rem] font-bold text-urgent-foreground shadow-soft hover:bg-urgent/90"
+          className="inline-flex min-h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-urgent px-3.5 text-[0.95rem] font-bold text-urgent-foreground shadow-soft hover:bg-urgent/90"
         >
           <Phone className="h-4 w-4" aria-hidden />
           Get help now

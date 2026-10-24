@@ -24,10 +24,10 @@ export type ResourcePage = {
   mime: string;
   name: string;
   /** Optional rotated/cropped copy used for display and text reading. */
-  edited?: Blob;
-  ocr?: PageOcr;
+  edited?: Blob | undefined;
+  ocr?: PageOcr | undefined;
   /** Text after the person reviewed and corrected it. */
-  checkedText?: string;
+  checkedText?: string | undefined;
 };
 
 export type Resource = {
@@ -39,9 +39,9 @@ export type Resource = {
   createdAt: number;
   updatedAt: number;
   pages: ResourcePage[];
-  textCheckedAt?: number;
-  explanation?: { data: Explanation; model: string; createdAt: number };
-  isDemo?: boolean;
+  textCheckedAt?: number | undefined;
+  explanation?: { data: Explanation; model: string; createdAt: number } | undefined;
+  isDemo?: boolean | undefined;
 };
 
 export type VoiceNote = {
@@ -50,18 +50,18 @@ export type VoiceNote = {
   title: string;
   originalTranscript: string;
   transcript: string;
-  audio?: Blob;
-  audioMime?: string;
+  audio?: Blob | undefined;
+  audioMime?: string | undefined;
   createdAt: number;
   updatedAt: number;
-  organized?: { data: OrganizedNote; model: string; createdAt: number };
+  organized?: { data: OrganizedNote; model: string; createdAt: number } | undefined;
 };
 
 export type SavedQuestion = {
   id: string;
   text: string;
   concern: string;
-  topicId?: string;
+  topicId?: string | undefined;
   discussed: boolean;
   wordedBy: "template" | "you" | "gemma";
   createdAt: number;

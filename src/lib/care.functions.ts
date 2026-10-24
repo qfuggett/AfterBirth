@@ -87,8 +87,8 @@ async function resolveLocation(place?: string, coords?: { lat: number; lng: numb
   }
   const m = p.match(/^([a-zA-Z .'-]{2,}),\s*([a-zA-Z]{2})$/);
   if (m) {
-    const city = m[1].trim();
-    const state = m[2].toUpperCase();
+    const city = (m[1] ?? "").trim();
+    const state = (m[2] ?? "").toUpperCase();
     const r = await fetch(`https://api.zippopotam.us/us/${state.toLowerCase()}/${encodeURIComponent(city.toLowerCase())}`, {
       signal: AbortSignal.timeout(8000),
     });
@@ -101,15 +101,20 @@ async function resolveLocation(place?: string, coords?: { lat: number; lng: numb
   return null;
 }
 
-async function censusGeocode(address: string): Promise<{ lat: number; lng: number } | null> {
+async function censusGeocode(address: string, expect: { city: string; state: string }): Promise<{ lat: number; lng: number } | null> {
   try {
     const r = await fetch(
       `https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=${encodeURIComponent(address)}&benchmark=Public_AR_Current&format=json`,
       { signal: AbortSignal.timeout(7000) },
     );
     const j = (await r.json()) as any;
-    const c = j?.result?.addressMatches?.[0]?.coordinates;
-    return c ? { lat: c.y, lng: c.x } : null;
+    const m = j?.result?.addressMatches?.[0];
+    const c = m?.coordinates;
+    const comp = m?.addressComponents ?? {};
+    // Reject matches in a different city or state (a wrong match would give a wrong distance).
+    if (!c || String(comp.state ?? "").toUpperCase() !== expect.state.toUpperCase()) return null;
+    if (String(comp.city ?? "").toUpperCase() !== expect.city.toUpperCase()) return null;
+    return { lat: c.y, lng: c.x };
   } catch {
     return null;
   }
@@ -166,7 +171,11 @@ async function searchNppes(cat: NonNullable<ReturnType<typeof getCategory>>, loc
   const coords = new Map<string, { lat: number; lng: number } | null>();
   await Promise.all(
     unique.map(async (a) => {
-      coords.set(a, await censusGeocode(a.replace(/, (Suite|Ste|Fl|Floor|Room|Rm|Unit|Bldg)[^,]*/gi, "")));
+      const parts = a.split(", ");
+      const city = parts[parts.length - 2] ?? "";
+      const state = (parts[parts.length - 1] ?? "").split(" ")[0] ?? "";
+      const c = await censusGeocode(a.replace(/, (Suite|Ste|Fl|Floor|Room|Rm|Unit|Bldg)[^,]*/gi, ""), { city, state });
+      coords.set(a, c && miles(loc, c) < 60 ? c : null);
     }),
   );
   for (const row of rows) {
@@ -224,7 +233,7 @@ async function searchPlaces(apiKey: string, cat: NonNullable<ReturnType<typeof g
 }
 
 export const searchCare = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => input.parse(d))
+  .validator((d: unknown) => input.parse(d))
   .handler(async ({ data }): Promise<CareSearchResponse> => {
     const cat = getCategory(data.categoryId);
     if (!cat) return { ok: false, reason: "bad_input", message: "Unknown care type." };

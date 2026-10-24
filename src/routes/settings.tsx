@@ -191,7 +191,7 @@ function SettingsPage() {
   );
 }
 
-function ServiceRow({ label, ok, detail }: { label: string; ok?: boolean; detail: string }) {
+function ServiceRow({ label, ok, detail }: { label: string; ok?: boolean | undefined; detail: string }) {
   return (
     <div className="flex items-start gap-3 border-t border-border pt-2 first-of-type:border-0">
       <span

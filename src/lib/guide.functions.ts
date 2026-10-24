@@ -52,7 +52,7 @@ JSON:`;
 }
 
 export const routeQuestion = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => z.object({ question: z.string().trim().min(2).max(500) }).parse(d))
+  .validator((d: unknown) => z.object({ question: z.string().trim().min(2).max(500) }).parse(d))
   .handler(async ({ data }): Promise<RouteResult> => {
     const { callGemma, extractJson, GemmaUnavailableError } = await import("./gemma.server");
     try {

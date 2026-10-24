@@ -100,7 +100,7 @@ export async function callGemma(prompt: string, opts: { maxTokens?: number } = {
 /** Pull the first JSON object out of a model reply (handles ```json fences). */
 export function extractJson(text: string): unknown {
   const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
-  const candidate = fenced ? fenced[1] : text;
+  const candidate = (fenced ? fenced[1] : text) ?? "";
   const start = candidate.indexOf("{");
   const end = candidate.lastIndexOf("}");
   if (start === -1 || end <= start) throw new GemmaUnavailableError("bad_output", "No JSON in Gemma reply.");
