@@ -16,6 +16,9 @@ import { Route as HelpRouteImport } from './routes/help'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as SupportRouteImport } from './routes/support'
+import { Route as QuestionsIndexRouteImport } from './routes/questions.index'
+import { Route as QuestionsQuestionIdRouteImport } from './routes/questions.$questionId'
+import { Route as QuestionsNewRouteImport } from './routes/questions.new'
 import { Route as SectionsSectionIdRouteImport } from './routes/sections.$sectionId'
 import { Route as TopicsTopicIdRouteImport } from './routes/topics.$topicId'
 
@@ -54,6 +57,21 @@ const SupportRoute = SupportRouteImport.update({
   path: '/support',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuestionsIndexRoute = QuestionsIndexRouteImport.update({
+  id: '/questions/',
+  path: '/questions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionsQuestionIdRoute = QuestionsQuestionIdRouteImport.update({
+  id: '/questions/$questionId',
+  path: '/questions/$questionId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionsNewRoute = QuestionsNewRouteImport.update({
+  id: '/questions/new',
+  path: '/questions/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SectionsSectionIdRoute = SectionsSectionIdRouteImport.update({
   id: '/sections/$sectionId',
   path: '/sections/$sectionId',
@@ -73,8 +91,11 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/support': typeof SupportRoute
+  '/questions/$questionId': typeof QuestionsQuestionIdRoute
+  '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/questions/': typeof QuestionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -84,8 +105,11 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/support': typeof SupportRoute
+  '/questions/$questionId': typeof QuestionsQuestionIdRoute
+  '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/questions': typeof QuestionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -96,8 +120,11 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/support': typeof SupportRoute
+  '/questions/$questionId': typeof QuestionsQuestionIdRoute
+  '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/questions/': typeof QuestionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -109,8 +136,11 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/support'
+    | '/questions/$questionId'
+    | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
+    | '/questions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -120,8 +150,11 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/support'
+    | '/questions/$questionId'
+    | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
+    | '/questions'
   id:
     | '__root__'
     | '/'
@@ -131,8 +164,11 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/support'
+    | '/questions/$questionId'
+    | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
+    | '/questions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -143,8 +179,11 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   SourcesRoute: typeof SourcesRoute
   SupportRoute: typeof SupportRoute
+  QuestionsQuestionIdRoute: typeof QuestionsQuestionIdRoute
+  QuestionsNewRoute: typeof QuestionsNewRoute
   SectionsSectionIdRoute: typeof SectionsSectionIdRoute
   TopicsTopicIdRoute: typeof TopicsTopicIdRoute
+  QuestionsIndexRoute: typeof QuestionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -198,6 +237,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SupportRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/questions/': {
+      id: '/questions/'
+      path: '/questions'
+      fullPath: '/questions/'
+      preLoaderRoute: typeof QuestionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questions/$questionId': {
+      id: '/questions/$questionId'
+      path: '/questions/$questionId'
+      fullPath: '/questions/$questionId'
+      preLoaderRoute: typeof QuestionsQuestionIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questions/new': {
+      id: '/questions/new'
+      path: '/questions/new'
+      fullPath: '/questions/new'
+      preLoaderRoute: typeof QuestionsNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sections/$sectionId': {
       id: '/sections/$sectionId'
       path: '/sections/$sectionId'
@@ -223,8 +283,11 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   SourcesRoute: SourcesRoute,
   SupportRoute: SupportRoute,
+  QuestionsQuestionIdRoute: QuestionsQuestionIdRoute,
+  QuestionsNewRoute: QuestionsNewRoute,
   SectionsSectionIdRoute: SectionsSectionIdRoute,
   TopicsTopicIdRoute: TopicsTopicIdRoute,
+  QuestionsIndexRoute: QuestionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
