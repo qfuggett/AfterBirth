@@ -239,7 +239,7 @@ function TopicPage() {
   );
 }
 
-function AskBanner({ q, via, model }: { q: string; via?: string; model?: string }) {
+function AskBanner({ q, via, model }: { q: string; via?: string | undefined; model?: string | undefined }) {
   return (
     <div className="rounded-2xl bg-sage-soft px-4 py-3 text-secondary-foreground">
       <p className="flex items-center gap-2 text-[0.85rem] font-bold uppercase tracking-wide">
@@ -254,7 +254,7 @@ function AskBanner({ q, via, model }: { q: string; via?: string; model?: string 
   );
 }
 
-function Block({ id, active, children }: { id: string; active?: string; children: ReactNode }) {
+function Block({ id, active, children }: { id: string; active?: string | undefined; children: ReactNode }) {
   return (
     <section id={`sec-${id}`} aria-labelledby={undefined} className={cn("scroll-mt-24 p-0.5", active === id && "highlighted")}>
       {children}
@@ -262,7 +262,7 @@ function Block({ id, active, children }: { id: string; active?: string; children
   );
 }
 
-function Detail({ id, title, active, children }: { id: string; title: string; active?: string; children: ReactNode }) {
+function Detail({ id, title, active, children }: { id: string; title: string; active?: string | undefined; children: ReactNode }) {
   const ref = useRef<HTMLDetailsElement>(null);
   return (
     <details
