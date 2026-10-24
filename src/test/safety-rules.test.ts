@@ -157,3 +157,20 @@ describe("Gemma 4 reply handling", () => {
     if (!prev.key) delete process.env.GEMMA_API_KEY;
   });
 });
+
+describe("Detroit hospital phone numbers", () => {
+  it("lists only numbers sourced from the hospital's own website", async () => {
+    const { DETROIT_HOSPITALS } = await import("@/content/hospitals");
+    const official = ["henryford.com", "dmc.org", "corewellhealth.org", "trinityhealthmichigan.org", "umwomenshealth.org", "mclaren.org"];
+    expect(DETROIT_HOSPITALS.length).toBeGreaterThanOrEqual(20);
+    for (const h of DETROIT_HOSPITALS) {
+      expect(h.numbers.length).toBeGreaterThan(0);
+      for (const n of h.numbers) expect(n.number).toMatch(/^\(\d{3}\) \d{3}-\d{4}$/);
+      expect(official.some((d) => new URL(h.sourceUrl).hostname.endsWith(d))).toBe(true);
+    }
+  });
+  it("dials US numbers with a country code", async () => {
+    const { telHref } = await import("@/content/hospitals");
+    expect(telHref("(313) 916-2600")).toBe("tel:+13139162600");
+  });
+});
