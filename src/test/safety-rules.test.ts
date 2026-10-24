@@ -128,3 +128,32 @@ describe("voice note guards", () => {
     expect(validateWordedQuestion("What is my pain medicine for?", "my pain medicine")).toBe("What is my pain medicine for?");
   });
 });
+
+describe("Gemma 4 reply handling", () => {
+  it("ignores the model's thought parts and keeps only the answer", async () => {
+    const { answerTextFromGoogle } = await import("@/lib/gemma.server");
+    const reply = {
+      candidates: [
+        {
+          content: {
+            parts: [
+              { text: 'Maybe {"action":"urgent_help"}?', thought: true },
+              { text: '{"action":"no_match"}' },
+            ],
+          },
+        },
+      ],
+    };
+    expect(answerTextFromGoogle(reply)).toBe('{"action":"no_match"}');
+  });
+  it("uses Gemma 4 31B by default", async () => {
+    const { readGemmaConfig } = await import("@/lib/gemma.server");
+    const prev = { key: process.env.GEMMA_API_KEY, model: process.env.GEMMA_MODEL };
+    process.env.GEMMA_API_KEY = "test";
+    delete process.env.GEMMA_MODEL;
+    expect(readGemmaConfig()?.model).toBe("gemma-4-31b-it");
+    process.env.GEMMA_API_KEY = prev.key;
+    if (prev.model) process.env.GEMMA_MODEL = prev.model;
+    if (!prev.key) delete process.env.GEMMA_API_KEY;
+  });
+});
