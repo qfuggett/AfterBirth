@@ -162,6 +162,8 @@
   h2,
   h3 {
     font-family: var(--font-display);
+    font-weight: 500 !important;
+    font-synthesis-weight: none;
     font-optical-sizing: auto;
     letter-spacing: -0.01em;
     line-height: 1.15;
@@ -228,6 +230,8 @@
 
 @utility font-display {
   font-family: var(--font-display);
+  font-weight: 500 !important;
+  font-synthesis-weight: none;
 }
 
 @utility tap {
