@@ -57,7 +57,10 @@ export function answerTextFromGoogle(json: any): string {
     .join("");
 }
 
-export async function callGemma(prompt: string, opts: { maxTokens?: number } = {}): Promise<{ text: string; model: string }> {
+export async function callGemma(
+  prompt: string,
+  opts: { maxTokens?: number; budgetMs?: number } = {},
+): Promise<{ text: string; model: string }> {
   const cfg = readGemmaConfig();
   if (!cfg) throw new GemmaUnavailableError("not_configured", "Gemma is not configured.");
   if (!/gemma/i.test(cfg.model)) {
@@ -66,7 +69,7 @@ export async function callGemma(prompt: string, opts: { maxTokens?: number } = {
   const maxTokens = opts.maxTokens ?? 600;
   const thinking = isThinkingGemma(cfg.model);
 
-  const send = (): Promise<Response> => {
+  const send = (timeoutMs: number): Promise<Response> => {
     if (cfg.format === "google") {
       const modelPath = cfg.model.startsWith("models/") ? cfg.model : `models/${cfg.model}`;
       return fetch(`${cfg.base}/${modelPath}:generateContent`, {
@@ -80,7 +83,7 @@ export async function callGemma(prompt: string, opts: { maxTokens?: number } = {
             ...(thinking ? { thinkingConfig: { thinkingLevel: "minimal" } } : {}),
           },
         }),
-        signal: AbortSignal.timeout(30000),
+        signal: AbortSignal.timeout(timeoutMs),
       });
     }
     return fetch(`${cfg.base}/chat/completions`, {
@@ -92,21 +95,26 @@ export async function callGemma(prompt: string, opts: { maxTokens?: number } = {
         temperature: 0,
         max_tokens: maxTokens,
       }),
-      signal: AbortSignal.timeout(30000),
+      signal: AbortSignal.timeout(timeoutMs),
     });
   };
 
+  // Google's hosted Gemma 4 31B frequently fails with an instant 500 "Internal error"
+  // (roughly 2 of 3 requests in testing) while successful replies take 15-25s.
+  // Keep retrying server errors within an overall time budget instead of giving up.
+  const deadline = Date.now() + (opts.budgetMs ?? 55000);
   let res: Response | null = null;
-  // The hosted Gemma endpoint occasionally returns a transient 500; retry once.
-  for (let attempt = 0; attempt < 2; attempt++) {
+  for (let attempt = 0; attempt < 10; attempt++) {
+    const remaining = deadline - Date.now();
+    if (remaining < 3000) break;
     try {
-      res = await send();
+      res = await send(Math.min(35000, remaining));
     } catch {
       res = null;
-      if (attempt === 1) throw new GemmaUnavailableError("upstream_error", "Could not reach the Gemma service.");
       continue;
     }
     if (res.status < 500) break;
+    await new Promise((r) => setTimeout(r, Math.min(250 * (attempt + 1), 1500)));
   }
   if (!res) throw new GemmaUnavailableError("upstream_error", "Could not reach the Gemma service.");
 

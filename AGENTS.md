@@ -23,3 +23,4 @@
 - Safety rules are covered by `src/test/safety-rules.test.ts`; update it when changing those rules.
 - Detroit-area hospital phone numbers live in `src/content/hospitals.ts`; only numbers confirmed on the hospital's own website are listed (tested in safety-rules), and the chosen hospital is an on-device preference.
 - Gemma 4 models reply with "thought" parts; `gemma.server.ts` requests minimal thinking and keeps only answer parts so reasoning text never reaches validation or users.
+- Google-hosted Gemma 4 31B often returns instant HTTP 500s; `callGemma` retries server errors within a ~55s time budget rather than switching models.
