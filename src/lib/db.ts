@@ -40,7 +40,7 @@ export type Resource = {
   updatedAt: number;
   pages: ResourcePage[];
   textCheckedAt?: number | undefined;
-  explanation?: { data: Explanation; model: string; createdAt: number };
+  explanation?: { data: Explanation; model: string; createdAt: number } | undefined;
   isDemo?: boolean | undefined;
 };
 
@@ -54,7 +54,7 @@ export type VoiceNote = {
   audioMime?: string | undefined;
   createdAt: number;
   updatedAt: number;
-  organized?: { data: OrganizedNote; model: string; createdAt: number };
+  organized?: { data: OrganizedNote; model: string; createdAt: number } | undefined;
 };
 
 export type SavedQuestion = {
