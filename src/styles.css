@@ -7,13 +7,13 @@
 /*
  * After Birth design system.
  * Warm ivory paper, muted terracotta, sage accents, dark readable ink.
- * Fraunces for headings, Atkinson Hyperlegible for body text.
+ * Cormorant Garamond (medium) for headings, DM Sans for body text.
  * All colors are oklch tokens; components only use semantic classes.
  */
 
 @theme inline {
-  --font-sans: "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
 
   --radius-sm: calc(var(--radius) - 8px);
   --radius-md: calc(var(--radius) - 4px);
