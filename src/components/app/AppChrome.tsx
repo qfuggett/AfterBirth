@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { BookOpen, FolderHeart, MessageCircleQuestion, MapPin, Phone, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { HospitalBar } from "./HospitalPicker";
 
 const TABS = [
   { to: "/", label: "Guide", icon: BookOpen, match: (p: string) => p === "/" || p.startsWith("/sections") || p.startsWith("/topics") || p.startsWith("/ask") || p.startsWith("/sources") },
@@ -12,6 +13,7 @@ const TABS = [
 export function TopBar() {
   const path = useRouterState({ select: (s) => s.location.pathname });
   const onHelp = path.startsWith("/help");
+  const showHospital = path === "/";
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <div className="mx-auto flex max-w-lg items-center gap-2 px-4 py-2.5">
@@ -37,6 +39,11 @@ export function TopBar() {
           Get help now
         </Link>
       </div>
+      {showHospital ? (
+        <div className="mx-auto max-w-lg px-4 pb-2.5">
+          <HospitalBar />
+        </div>
+      ) : null}
     </header>
   );
 }
