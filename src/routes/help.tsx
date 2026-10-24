@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { z } from "zod";
 import { ExternalLink, HeartHandshake } from "lucide-react";
 import { CallButtons, UrgentHelpContent } from "@/components/app/UrgentHelp";
+import { HospitalNumbersCard } from "@/components/app/HospitalPicker";
 import { DraftNotice, Page } from "@/components/app/bits";
 import { BABY_WARNING_SIGNS, CRISIS_LINES, MATERNAL_WARNING_SIGNS } from "@/content/help";
 import { getSource } from "@/content/catalog";
@@ -95,6 +96,8 @@ function HelpPage() {
       ) : (
         <p className="rounded-2xl bg-muted px-4 py-3">{BABY_WARNING_SIGNS.note}</p>
       )}
+
+      <HospitalNumbersCard />
 
       <section className="space-y-2">
         <h2 className="text-lg font-semibold">Where this list comes from</h2>

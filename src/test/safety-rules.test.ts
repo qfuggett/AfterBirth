@@ -128,3 +128,49 @@ describe("voice note guards", () => {
     expect(validateWordedQuestion("What is my pain medicine for?", "my pain medicine")).toBe("What is my pain medicine for?");
   });
 });
+
+describe("Gemma 4 reply handling", () => {
+  it("ignores the model's thought parts and keeps only the answer", async () => {
+    const { answerTextFromGoogle } = await import("@/lib/gemma.server");
+    const reply = {
+      candidates: [
+        {
+          content: {
+            parts: [
+              { text: 'Maybe {"action":"urgent_help"}?', thought: true },
+              { text: '{"action":"no_match"}' },
+            ],
+          },
+        },
+      ],
+    };
+    expect(answerTextFromGoogle(reply)).toBe('{"action":"no_match"}');
+  });
+  it("uses Gemma 4 31B by default", async () => {
+    const { readGemmaConfig } = await import("@/lib/gemma.server");
+    const prev = { key: process.env["GEMMA_API_KEY"], model: process.env["GEMMA_MODEL"] };
+    process.env["GEMMA_API_KEY"] = "test";
+    delete process.env["GEMMA_MODEL"];
+    expect(readGemmaConfig()?.model).toBe("gemma-4-31b-it");
+    process.env["GEMMA_API_KEY"] = prev.key;
+    if (prev.model) process.env["GEMMA_MODEL"] = prev.model;
+    if (!prev.key) delete process.env["GEMMA_API_KEY"];
+  });
+});
+
+describe("Detroit hospital phone numbers", () => {
+  it("lists only numbers sourced from the hospital's own website", async () => {
+    const { DETROIT_HOSPITALS } = await import("@/content/hospitals");
+    const official = ["henryford.com", "dmc.org", "corewellhealth.org", "trinityhealthmichigan.org", "umwomenshealth.org", "mclaren.org"];
+    expect(DETROIT_HOSPITALS.length).toBeGreaterThanOrEqual(20);
+    for (const h of DETROIT_HOSPITALS) {
+      expect(h.numbers.length).toBeGreaterThan(0);
+      for (const n of h.numbers) expect(n.number).toMatch(/^\(\d{3}\) \d{3}-\d{4}$/);
+      expect(official.some((d) => new URL(h.sourceUrl).hostname.endsWith(d))).toBe(true);
+    }
+  });
+  it("dials US numbers with a country code", async () => {
+    const { telHref } = await import("@/content/hospitals");
+    expect(telHref("(313) 916-2600")).toBe("tel:+13139162600");
+  });
+});

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { Download, ShieldCheck, Trash2 } from "lucide-react";
 import { BackLink, Page } from "@/components/app/bits";
+import { HospitalSelect } from "@/components/app/HospitalPicker";
 import { Button } from "@/components/ui/button";
 import { HOSPITAL_SYSTEMS } from "@/content/catalog";
 import { usePrefs, type Prefs } from "@/lib/prefs";
@@ -73,6 +74,15 @@ function SettingsPage() {
       <ChoiceGroup legend="Where are you in recovery?" options={STAGES} value={prefs.stage} onChange={(v) => update({ stage: v })} />
       <ChoiceGroup legend="Who is using the app?" options={ROLE} value={prefs.role} onChange={(v) => update({ role: v })} />
       <ChoiceGroup legend="Your birth experience" options={BIRTH} value={prefs.birth} onChange={(v) => update({ birth: v })} />
+      <div className="space-y-2">
+        <label htmlFor="hospital-settings-select" className="block font-display text-xl font-semibold">
+          Your hospital
+        </label>
+        <p className="text-[0.95rem] text-muted-foreground">
+          Keeps the hospital's phone numbers on the Get help page. Saved on this phone only.
+        </p>
+        <HospitalSelect id="hospital-settings-select" />
+      </div>
       <fieldset className="space-y-2">
         <legend className="font-display text-xl font-semibold">Hospital system</legend>
         <p className="text-[0.95rem] text-muted-foreground">

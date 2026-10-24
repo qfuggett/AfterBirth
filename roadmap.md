@@ -6,7 +6,10 @@
 - [x] Discharge explanation: on-device OCR, checks for unclear doses/missing pages, Gemma explanation with source quotes, fictional demo
 - [x] Voice notes: dictation, editable transcript, optional audio, Gemma organizing with uncertainty preserved
 - [x] Find care: ZIP/city or location, NPPES directory (Google Places when configured), list + map
-- [ ] Gemma credentials (GEMMA_API_KEY) — waiting on user
+- [x] Gemma credentials saved; app uses Gemma 4 31B (gemma-4-31b-it)
+- [x] README rewritten with project description
+- [x] Detroit-area hospital drop-down next to Get help now, with official phone numbers on Get help page
+- [ ] DMC Hutzel direct hospital number — DMC site blocks automated checks; using DMC's official main line until confirmed
 - [ ] Optional Google Places key (GOOGLE_MAPS_API_KEY) — waiting on user
 - [ ] QR code — waiting on publish (needs a public URL)
 - [ ] Clinical review of all guide content — outside the app build
