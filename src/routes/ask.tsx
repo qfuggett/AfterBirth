@@ -136,7 +136,7 @@ function GemmaStatus({ pending, result, q, urgentShown }: { pending: boolean; re
     return (
       <p className="flex items-center gap-2 rounded-2xl bg-muted px-4 py-3" role="status">
         <Loader2 className="h-5 w-5 animate-spin" aria-hidden />
-        Finding the best page…
+        Finding the best page… this can take up to a minute.
       </p>
     );
   }
