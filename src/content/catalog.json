@@ -1,0 +1,1268 @@
+{
+  "title": "Detroit-area postpartum guide: research source and topic catalog",
+  "research_date": "2026-10-24",
+  "scope": "Research catalog for a standalone consumer postpartum companion; guide content requires clinical review. Product and design requirements are recorded in the companion briefs.",
+  "notes": [
+    "Gemma routes guide questions to reviewed pages. Optional personal-document explanation, question preparation and note organization are separate constrained tasks; no independent medical instructions.",
+    "Examples are navigation test inputs, not proof of a diagnosis; urgent routing overrides routine topic matches.",
+    "Hospital-specific procedures require facility confirmation; no universal magnesium-related fasting rule or hourly BP schedule was established.",
+    "Indexed or migrated resources are marked and must be resolved before patient use.",
+    "Clinical review has not occurred."
+  ],
+  "sources": [
+    {
+      "id": "DMC01",
+      "publisher": "Detroit Medical Center",
+      "geography": "Detroit / system-wide education",
+      "title": "Postpartum Care for You and Your Baby",
+      "url": "https://www.dmc.org/services/obstetrics/obstetrics-health-library/corporate-content/postpartum-care?c=BTPF",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": "2025-11-10",
+      "coverage": "Rooming-in, identification, newborn checks, discharge and documentation.",
+      "limitations": "Confirm applicability to Hutzel or Sinai-Grace; corporate education is not a unit protocol.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF01",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "Newborn Care",
+      "url": "https://www.henryford.com/services/baby/newborn-care",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "In-hospital feeding help and newborn-care teaching.",
+      "limitations": "Published follow-up timings should not override individualized discharge instructions.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF02",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "Your Postpartum Recovery Plan",
+      "url": "https://www.henryford.com/blog/2026/07/your-postpartum-recovery-plan",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": "2026-07-30",
+      "coverage": "Recovery supplies, practical support, physical and emotional recovery.",
+      "limitations": "Educational article, not hospital procedure.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF03",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "Postpartum Care for Mother and Newborn after Delivery",
+      "url": "https://www.henryford.com/services/baby/newborn-care/postpartum-care",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "Recovery topics: uterus, bleeding, perineum, bowel function and mood.",
+      "limitations": "Editorial review required: includes generalized weight-loss targets, tight-bra and blow-dryer advice; do not reproduce those.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF04",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "How Preeclampsia Can Affect You After Your Pregnancy",
+      "url": "https://www.henryford.com/blog/2023/07/how-preeclampsia-can-affect-you-after-your-pregnancy",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": "2023-07-06",
+      "coverage": "Postpartum risks, monitoring, medication adjustment, long-term follow-up.",
+      "limitations": "Does not establish diet restrictions or inpatient BP-check frequency.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF05",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit and Sterling Heights program",
+      "title": "Heart Healthy Moms",
+      "url": "https://www.henryford.com/services/cardiology/women/heart-healthy-moms",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "Remote BP monitoring, virtual visits and yearlong care after hypertensive pregnancy.",
+      "limitations": "Eligibility and service access require confirmation; not an emergency monitoring promise by this guide.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF06",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area program",
+      "title": "What to Expect From Heart Healthy Moms",
+      "url": "https://www.henryford.com/services/cardiology/women/heart-healthy-moms/what-to-expect-from-heart-healthy-moms",
+      "format": "web_page",
+      "verification": "page_opened",
+      "published_or_revised": null,
+      "coverage": "Program-specific patient expectations.",
+      "limitations": "Recheck full details before turning into patient instructions.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF07",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "Mental Health During and After Pregnancy",
+      "url": "https://www.henryford.com/services/baby/giving-birth/prenatal-postnatal/perinatal-behavioral-health",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "Perinatal behavioral-health services and care connections.",
+      "limitations": "Program-specific eligibility; not a crisis service.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF08",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "A Sleep Survival Guide For Exhausted New Parents",
+      "url": "https://www.henryford.com/blog/2024/04/sleep-survival-guide-for-exhausted-new-parents",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": "2024-04-23",
+      "coverage": "Shared rest planning and emotional health of birth and non-birth parents.",
+      "limitations": "Pair all sleep suggestions with current infant safe-sleep guidance.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF09",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "Lactation Consultants",
+      "url": "https://www.henryford.com/services/baby/breastfeeding/lactation-consultants",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Support for latch, pain, supply, separation and feeding challenges.",
+      "limitations": "Access varies by location; no guarantee of immediate consultation.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF10",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "How To Overcome Common Breastfeeding Problems",
+      "url": "https://www.henryford.com/blog/2024/10/how-to-overcome-common-breastfeeding-problems",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": "2024-10-29",
+      "coverage": "Latch concerns, nipple pain, mastitis, pumping and avoiding deep breast massage.",
+      "limitations": "Do not infer infection or recommend antibiotics from symptoms alone.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF11",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "How To Manage Gestational Diabetes",
+      "url": "https://www.henryford.com/blog/2023/11/how-to-manage-gestational-diabetes",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": "2023-11-16",
+      "coverage": "Follow-up glucose testing and newborn blood-sugar concerns.",
+      "limitations": "Do not copy 'delivery curative' as a universal promise; postpartum testing remains important.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF12",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit community program",
+      "title": "Women-Inspired Neighborhood Network: Detroit",
+      "url": "https://www.henryford.com/about/community-health/winnetwork",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Community health workers, family support and resources through the first year.",
+      "limitations": "Verify enrollment, availability and catchment before listing a direct referral.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF13",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system, general vascular care",
+      "title": "Deep Vein Thrombosis",
+      "url": "https://www.henryford.com/services/vascular-disease/veins/deep-vein-thrombosis",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Clot evaluation, ultrasound and treatment categories.",
+      "limitations": "General DVT resource, not postpartum-specific prescribing guidance.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF14",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system",
+      "title": "Cardio-Obstetrics",
+      "url": "https://www.henryford.com/services/cardiology/women/cardio-obstetrics",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Specialist care for pregnancy-related heart conditions.",
+      "limitations": "Does not give a fixed postpartum inpatient treatment sequence.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF15",
+      "publisher": "Henry Ford Health",
+      "geography": "Detroit-area system, general cardiac care",
+      "title": "Cardiomyopathy Clinic",
+      "url": "https://www.henryford.com/services/cardiomyopathy",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Heart-muscle disorders, testing and treatment categories; includes peripartum cause.",
+      "limitations": "General cardiomyopathy page; use postpartum-specific clinical review.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "HF16",
+      "publisher": "Henry Ford Health",
+      "geography": "Location-specific policies",
+      "title": "Mother and Baby Units: Visitor Guidelines",
+      "url": "https://www.henryford.com/visitors/guidelines/mother-and-baby-units",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "Support-person and visitor information.",
+      "limitations": "Live policy: recheck for the selected hospital before publishing.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "CW01",
+      "publisher": "Corewell Health",
+      "geography": "Southeast Michigan and statewide hub",
+      "title": "What To Expect After Delivery",
+      "url": "https://corewellhealth.org/care-and-specialties/womens-health/pregnancy-hub/after-delivery",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "Recovery, support services, questions and links to three patient booklets.",
+      "limitations": "System-wide hub does not establish a particular unit's procedure.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "CW02",
+      "publisher": "Corewell Health",
+      "geography": "Regional patient education",
+      "title": "You and Your Baby",
+      "url": "https://assets.contentstack.io/v3/assets/blt3055f692fe7bf193/blt79d621bb14673723/womens-health-you-and-your-baby.pdf",
+      "format": "pdf",
+      "verification": "pdf_relevant_pages_read",
+      "published_or_revised": null,
+      "coverage": "Parent and newborn recovery topics, warning signs, personal care and safety.",
+      "limitations": "28-page PDF. Relevant PDF pages 3-4 and 14-18; check current recommendations before adapting older advice.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "CW03",
+      "publisher": "Corewell Health / Beaumont",
+      "geography": "Southeast Michigan legacy website",
+      "title": "Potential Postpartum Complications",
+      "url": "https://www.beaumont.org/services/womens-services/maternity/after-pregnancy/moms-health/potential-complications",
+      "format": "web_page",
+      "verification": "indexed_content_read_direct_open_unverified",
+      "published_or_revised": null,
+      "coverage": "Local warning-sign and complication overview.",
+      "limitations": "Fever wording differs from CDC; do not adopt the higher threshold. Older indexed page, recheck current canonical URL.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "CW04",
+      "publisher": "Corewell Health / Beaumont",
+      "geography": "Southeast Michigan legacy website",
+      "title": "Preeclampsia",
+      "url": "https://www.beaumont.org/conditions/preeclampsia",
+      "format": "web_page",
+      "verification": "indexed_content_read_direct_open_403",
+      "published_or_revised": null,
+      "coverage": "Severe features, postpartum occurrence, HELLP and specialist care.",
+      "limitations": "Broad condition education; no verified food restriction or hourly BP protocol.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "CW05",
+      "publisher": "Corewell Health / Beaumont",
+      "geography": "Southeast Michigan legacy website",
+      "title": "Medical Labor and Delivery Intervention",
+      "url": "https://www.beaumont.org/treatments/intervention-medical-delivery",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Oxytocin after birth for bleeding and anesthesia context.",
+      "limitations": "Most page content concerns labor; use only relevant postpartum material.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "CW06",
+      "publisher": "Corewell Health / Beaumont",
+      "geography": "Southeast Michigan legacy website",
+      "title": "Issues Not Producing Breast Milk",
+      "url": "https://www.beaumont.org/conditions/issues-not-producing-breast-milk",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Delayed milk production and reasons to seek feeding assessment.",
+      "limitations": "Avoid fixed milk-arrival promises or assuming insufficient intake without assessment.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "CW07",
+      "publisher": "Corewell Health / Beaumont",
+      "geography": "Southeast Michigan legacy website",
+      "title": "C-Section Delivery Surgery",
+      "url": "https://www.beaumont.org/treatments/childbirth-c-section",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Surgical context and complications such as infection, clots and anesthesia concerns.",
+      "limitations": "Not a complete post-op discharge protocol.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM01",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor / regional supplemental source",
+      "title": "Pregnancy to Parent Wellness Resources",
+      "url": "https://www.uofmhealth.org/our-care/specialties-services/pregnancy-parent-wellness-resources",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "Recovery, feeding, emotional health, relationships and first-year resource links.",
+      "limitations": "Some outbound links have migrated; not Detroit hospital policy.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM02",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor program",
+      "title": "MiHeart Program",
+      "url": "https://www.med.umich.edu/1libr/Gyn/BirthCenterPostpartum/MiHeartProgram.pdf",
+      "format": "pdf",
+      "verification": "pdf_all_pages_read",
+      "published_or_revised": "2024-09",
+      "coverage": "Specific home-BP program: training, texts, review and follow-up.",
+      "limitations": "Program-specific, not a universal BP schedule or emergency threshold. CC BY-NC-SA 4.0 stated.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM03",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor / regional specialty care",
+      "title": "Healthy Healing After Delivery Program",
+      "url": "https://www.uofmhealth.org/our-care/specialties-services/healthy-healing-after-delivery-program",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Severe tears, bladder/bowel symptoms, pelvic-floor assessment and treatment.",
+      "limitations": "Program says available regardless of delivery hospital; verify current scheduling and coverage.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM04",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor educational handout",
+      "title": "Healing After Birth: Taking Care of Your Wound",
+      "url": "https://www.med.umich.edu/1libr/Gyn/BirthCenterPostpartum/HealingAfterBirthWoundCare.pdf",
+      "format": "pdf_migrated",
+      "verification": "indexed_content_read_redirects_to_library",
+      "published_or_revised": null,
+      "coverage": "Vaginal wound and C-section wound care topics.",
+      "limitations": "Old PDF redirects to new library; replace with a working document-specific link before use.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM05",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor program",
+      "title": "Navigating the Transition from Pregnancy to Parenthood",
+      "url": "https://www.med.umich.edu/1libr/Gyn/BirthCenterPostpartum/PregnancytoParenthood.pdf",
+      "format": "pdf_migrated",
+      "verification": "indexed_content_read_redirects_to_library",
+      "published_or_revised": null,
+      "coverage": "Tailored postpartum follow-up and high-BP monitoring eligibility.",
+      "limitations": "Old PDF redirects; retrieve current library record before publishing.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM06",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor, general anesthesiology",
+      "title": "Epidural Blood Patch",
+      "url": "https://med.umich.edu/1libr/Anesthesiology/EpiduralBloodPatch.pdf",
+      "format": "pdf",
+      "verification": "indexed_content_read_direct_open_unavailable",
+      "published_or_revised": null,
+      "coverage": "CSF-leak headache and purpose of blood patch.",
+      "limitations": "General procedural handout; postpartum headache needs assessment, not self-diagnosis. Resolve current URL.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM07",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor educational handout",
+      "title": "Postpartum Urinary Retention",
+      "url": "https://www.med.umich.edu/1libr/HealthyHealing/PostpartumUrinaryRetention.pdf",
+      "format": "pdf",
+      "verification": "indexed_excerpt_only",
+      "published_or_revised": null,
+      "coverage": "Symptoms and treatment-topic lead for bladder-emptying difficulty.",
+      "limitations": "Only indexed excerpt reviewed; obtain full current handout before writing catheter instructions.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM08",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor educational handout",
+      "title": "Healing After a Pregnancy: When to Call Your Provider",
+      "url": "https://www.med.umich.edu/1libr/Gyn/BirthCenterPostpartum/HealingAfterPregnancyWhenToCall.pdf",
+      "format": "pdf",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Recovery concern categories.",
+      "limitations": "Conflicts with CDC: higher fever threshold and longer bleeding wait. Not suitable as shared urgency rules.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "UM09",
+      "publisher": "University of Michigan Health",
+      "geography": "Ann Arbor / regional education",
+      "title": "What Is Placenta Accreta? An Expert Explains",
+      "url": "https://www.uofmhealth.org/health-lab/what-placenta-accreta-expert-explains",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Specialist planning, hemorrhage preparation and condition-specific recovery.",
+      "limitations": "Not a general pathway for all C-sections or all postpartum bleeding.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N01",
+      "publisher": "CDC",
+      "geography": "National authoritative supplement",
+      "title": "Urgent Maternal Warning Signs and Symptoms",
+      "url": "https://www.cdc.gov/hearher/maternal-warning-signs/index.html",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": "2024-05-15",
+      "coverage": "Shared maternal warning-sign reference for pregnancy and year after delivery.",
+      "limitations": "Not a diagnosis tool; hospital-specific escalation wording needs clinical review.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N02",
+      "publisher": "ACOG",
+      "geography": "National professional guidance",
+      "title": "Optimizing Postpartum Care",
+      "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care",
+      "format": "web_page",
+      "verification": "indexed_content_read_direct_open_402",
+      "published_or_revised": "2018-05",
+      "coverage": "Ongoing postpartum care and comprehensive recovery domains.",
+      "limitations": "General timing is not sufficient for high-risk patients; verify current guideline at implementation.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N03",
+      "publisher": "ACOG",
+      "geography": "National patient education supplement",
+      "title": "3 Conditions to Watch for After Childbirth",
+      "url": "https://www.acog.org/womens-health/experts-and-stories/the-latest/3-conditions-to-watch-for-after-childbirth",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Preeclampsia, hemorrhage and endometritis with treatment categories.",
+      "limitations": "Useful where local public treatment descriptions are incomplete.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N04",
+      "publisher": "AHRQ",
+      "geography": "National clinician-facing supplement",
+      "title": "Safe Medication Administration: Magnesium Sulfate",
+      "url": "https://www.ahrq.gov/patient-safety/settings/labor-delivery/perinatal-care/modules/strategies/medication/tool-safe-mgso4.html",
+      "format": "web_page",
+      "verification": "page_read",
+      "published_or_revised": null,
+      "coverage": "Infusion monitoring domains and facility policy variation.",
+      "limitations": "Clinician-facing; summarize rationale only, not dosing or a patient treatment protocol.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N05",
+      "publisher": "Mayo Clinic",
+      "geography": "Nonlocal hospital supplement",
+      "title": "Postpartum Preeclampsia: Diagnosis and Treatment",
+      "url": "https://www.mayoclinic.org/diseases-conditions/postpartum-preeclampsia/diagnosis-treatment/drc-20376652",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Blood/urine tests, BP medicines and seizure prevention with magnesium.",
+      "limitations": "Not a Detroit-specific protocol; durations are typical, not guaranteed.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N06",
+      "publisher": "CDC",
+      "geography": "National newborn safety supplement",
+      "title": "Helping Babies Sleep Safely",
+      "url": "https://www.cdc.gov/reproductive-health/features/babies-sleep.html",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Back sleeping, firm flat surface and safe sleep environment.",
+      "limitations": "Pair parent-rest guidance with this source; no adult-bed or sofa sleep implication.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N07",
+      "publisher": "American Academy of Pediatrics / HealthyChildren",
+      "geography": "National newborn safety supplement",
+      "title": "Fever and Your Baby",
+      "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/pages/fever-and-your-baby.aspx",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Urgent clinician contact for fever in young infants.",
+      "limitations": "Keep baby warning signs separate from maternal symptoms.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N08",
+      "publisher": "Michigan Department of Health and Human Services",
+      "geography": "Michigan public health",
+      "title": "Urgent Maternal Warning Signs",
+      "url": "https://www.michigan.gov/mdhhs/keep-mi-healthy/maternal-and-infant-health/urgent-maternal-warning-signs",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Michigan warning-sign resource.",
+      "limitations": "Use CDC's exact temperature boundary for the shared draft.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N09",
+      "publisher": "Office on Women's Health",
+      "geography": "National mental-health supplement",
+      "title": "Postpartum Depression",
+      "url": "https://womenshealth.gov/mental-health/mental-health-conditions/postpartum-depression",
+      "format": "web_page",
+      "verification": "indexed_content_read",
+      "published_or_revised": null,
+      "coverage": "Depression symptoms, treatment and distinction from transient blues.",
+      "limitations": "Do not require waiting two weeks when symptoms are severe or safety concerns exist.",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "N10",
+      "publisher": "Michigan Department of Health and Human Services",
+      "geography": "Michigan community support",
+      "title": "Maternal Infant Health Program: About Us",
+      "url": "https://www.michigan.gov/en/mihp/about-us",
+      "format": "web_page",
+      "verification": "indexed_excerpt_read",
+      "published_or_revised": null,
+      "coverage": "Nurse and social-worker support and connection to community care.",
+      "limitations": "Confirm current eligibility and local provider access before publishing enrollment details.",
+      "checked_on": "2026-10-24"
+    }
+  ],
+  "topics": [
+    {
+      "id": "hospital-orientation",
+      "title": "After birth: who is caring for us?",
+      "stage": "hospital",
+      "source_ids": [
+        "DMC01",
+        "HF01"
+      ],
+      "example_questions": [
+        "What happens after delivery?",
+        "Who checks on me and the baby?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "routine-checks",
+      "title": "Why staff check bleeding, the uterus and vital signs",
+      "stage": "hospital",
+      "source_ids": [
+        "CW02",
+        "HF03",
+        "N03"
+      ],
+      "example_questions": [
+        "Why are they pressing on my belly?",
+        "Why do they keep checking my bleeding?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "vaginal-recovery",
+      "title": "Recovery after vaginal birth",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "UM04",
+        "HF02"
+      ],
+      "example_questions": [
+        "How do I care for stitches?",
+        "What is a peri bottle?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "cesarean-recovery",
+      "title": "Recovery after a C-section",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "CW07",
+        "UM04"
+      ],
+      "example_questions": [
+        "When can I get up after surgery?",
+        "How do I look after my incision?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "pain-plan",
+      "title": "Understanding your pain-relief plan",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "HF02",
+        "CW01"
+      ],
+      "example_questions": [
+        "What can I ask about pain relief?",
+        "My pain medicine isn't helping"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "bathroom-recovery",
+      "title": "Peeing, bowel movements and hemorrhoids",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "HF03",
+        "UM07"
+      ],
+      "example_questions": [
+        "I'm scared to poop",
+        "Why can't I pee?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "bleeding-and-cramps",
+      "title": "Bleeding, discharge and cramping",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "HF03",
+        "N01"
+      ],
+      "example_questions": [
+        "What is lochia?",
+        "How much bleeding is too much?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "food-drink-movement",
+      "title": "Eating, drinking and getting up safely",
+      "stage": "hospital",
+      "source_ids": [
+        "N04",
+        "CW07"
+      ],
+      "example_questions": [
+        "Why can't I eat yet?",
+        "Can I walk with this IV?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "feeding-support",
+      "title": "Getting help with feeding",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "HF09",
+        "CW01"
+      ],
+      "example_questions": [
+        "Can someone help us feed the baby?",
+        "Can we use formula?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "milk-pumping-separation",
+      "title": "Milk changes, pumping and separation",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "CW06",
+        "HF10"
+      ],
+      "example_questions": [
+        "My milk hasn't come in",
+        "I'm separated from my baby"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "newborn-checks",
+      "title": "Newborn checks and screening",
+      "stage": "hospital",
+      "source_ids": [
+        "DMC01",
+        "HF01"
+      ],
+      "example_questions": [
+        "Why does my baby need a heel prick?",
+        "What tests happen before we leave?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "baby-security",
+      "title": "Baby identification and hospital safety",
+      "stage": "hospital",
+      "source_ids": [
+        "DMC01"
+      ],
+      "example_questions": [
+        "Why are our bracelets checked?",
+        "Who can take the baby out of the room?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "safe-sleep",
+      "title": "Safe sleep when parents are exhausted",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "N06"
+      ],
+      "example_questions": [
+        "Can baby sleep on my chest?",
+        "I'm falling asleep holding the baby"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "newborn-basics",
+      "title": "Diapers, cord care and bathing",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "CW02",
+        "HF01"
+      ],
+      "example_questions": [
+        "How do I clean the cord?",
+        "Can someone show me a diaper change?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "baby-needs-extra-care",
+      "title": "When a baby needs extra monitoring or NICU care",
+      "stage": "hospital",
+      "source_ids": [
+        "DMC01",
+        "HF11"
+      ],
+      "example_questions": [
+        "Why are they checking baby's sugar?",
+        "Why is my baby staying longer?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "support-person-hospital",
+      "title": "Fathers and support people: helping in the hospital",
+      "stage": "hospital",
+      "source_ids": [
+        "HF08",
+        "HF16"
+      ],
+      "example_questions": [
+        "What can dad do?",
+        "Can someone stay overnight?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "discharge-readiness",
+      "title": "What must happen before we leave?",
+      "stage": "discharge",
+      "source_ids": [
+        "DMC01",
+        "CW01"
+      ],
+      "example_questions": [
+        "Why aren't we discharged yet?",
+        "What should we ask before going home?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "paperwork",
+      "title": "Birth paperwork and appointments",
+      "stage": "discharge",
+      "source_ids": [
+        "DMC01",
+        "HF01"
+      ],
+      "example_questions": [
+        "What paperwork do we need?",
+        "When is baby's first appointment?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "home-first-days",
+      "title": "The first days at home",
+      "stage": "home",
+      "source_ids": [
+        "HF02",
+        "UM01"
+      ],
+      "example_questions": [
+        "How do we prepare for the first night?",
+        "What supplies do I need?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "home-medications",
+      "title": "Following your discharge medication plan",
+      "stage": "home",
+      "source_ids": [
+        "CW01",
+        "HF05"
+      ],
+      "example_questions": [
+        "Which medicines do I keep taking?",
+        "Can I change my blood pressure medicine?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "rest-support",
+      "title": "Rest, shared care and practical help",
+      "stage": "home",
+      "source_ids": [
+        "HF08",
+        "HF12"
+      ],
+      "example_questions": [
+        "How can my partner help me rest?",
+        "We have no help at home"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "mood-and-bonding",
+      "title": "Emotional changes and bonding",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "N09",
+        "HF07",
+        "UM01"
+      ],
+      "example_questions": [
+        "Why am I crying?",
+        "I don't feel bonded yet"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "father-mental-health",
+      "title": "Fathers and non-birth parents need support too",
+      "stage": "home",
+      "source_ids": [
+        "HF08"
+      ],
+      "example_questions": [
+        "Can dads get postpartum depression?",
+        "I'm overwhelmed as a new dad"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "followup",
+      "title": "Postpartum follow-up and recovery goals",
+      "stage": "home",
+      "source_ids": [
+        "N02",
+        "UM05"
+      ],
+      "example_questions": [
+        "Do I wait six weeks for care?",
+        "When should I be checked?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "pelvic-floor-sex",
+      "title": "Pelvic floor, activity, sex and contraception",
+      "stage": "home",
+      "source_ids": [
+        "UM03",
+        "N02"
+      ],
+      "example_questions": [
+        "I'm leaking urine",
+        "When can we have sex again?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "community-help",
+      "title": "Detroit-area family and community support",
+      "stage": "home",
+      "source_ids": [
+        "HF12",
+        "N10"
+      ],
+      "example_questions": [
+        "Where can we get more help?",
+        "Can a nurse visit us at home?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "preeclampsia",
+      "title": "Preeclampsia and high blood pressure after birth",
+      "stage": "complication",
+      "source_ids": [
+        "CW04",
+        "HF04",
+        "N05"
+      ],
+      "example_questions": [
+        "I had preeclampsia",
+        "Can preeclampsia happen after birth?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "magnesium",
+      "title": "Why magnesium treatment involves extra monitoring",
+      "stage": "complication",
+      "source_ids": [
+        "N04",
+        "N05"
+      ],
+      "example_questions": [
+        "What is the magnesium drip for?",
+        "Why do they check my reflexes?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "blood-pressure-monitoring",
+      "title": "Understanding frequent blood-pressure checks",
+      "stage": "complication",
+      "source_ids": [
+        "N04",
+        "HF04",
+        "UM02"
+      ],
+      "example_questions": [
+        "Why check my blood pressure every hour?",
+        "How often do I check it at home?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "blood-pressure-home",
+      "title": "Going home after a blood-pressure complication",
+      "stage": "complication",
+      "source_ids": [
+        "HF05",
+        "HF06",
+        "UM02"
+      ],
+      "example_questions": [
+        "Do I need a cuff?",
+        "Who reviews my readings?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "hellp-eclampsia",
+      "title": "When preeclampsia becomes more severe",
+      "stage": "complication",
+      "source_ids": [
+        "CW04",
+        "N05"
+      ],
+      "example_questions": [
+        "What does HELLP mean?",
+        "What is eclampsia?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "hemorrhage",
+      "title": "Heavy bleeding and postpartum hemorrhage",
+      "stage": "complication",
+      "source_ids": [
+        "CW05",
+        "N03"
+      ],
+      "example_questions": [
+        "Why did they give me oxytocin?",
+        "What happens if bleeding doesn't stop?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "anemia",
+      "title": "Recovery after significant blood loss",
+      "stage": "complication",
+      "source_ids": [
+        "N03",
+        "HF02"
+      ],
+      "example_questions": [
+        "Why am I weak after losing blood?",
+        "Do I need iron or a transfusion?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "infection",
+      "title": "Infection after birth: uterus, urine or wound",
+      "stage": "complication",
+      "source_ids": [
+        "CW03",
+        "N03"
+      ],
+      "example_questions": [
+        "My incision looks infected",
+        "Why am I getting IV antibiotics?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "blood-clots",
+      "title": "Blood clots in the leg or lung",
+      "stage": "complication",
+      "source_ids": [
+        "HF13",
+        "N01"
+      ],
+      "example_questions": [
+        "One leg is swollen",
+        "Why do I need an ultrasound?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "headache",
+      "title": "Headache after birth: get assessed first",
+      "stage": "complication",
+      "source_ids": [
+        "UM06",
+        "N01"
+      ],
+      "example_questions": [
+        "Is this a spinal headache?",
+        "What is a blood patch?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "severe-tear",
+      "title": "Severe tears, pelvic pain and bladder or bowel changes",
+      "stage": "complication",
+      "source_ids": [
+        "UM03",
+        "UM04"
+      ],
+      "example_questions": [
+        "What is a third-degree tear?",
+        "I can't control my bowels"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "urinary-retention",
+      "title": "Trouble emptying the bladder after birth",
+      "stage": "complication",
+      "source_ids": [
+        "UM07",
+        "UM03"
+      ],
+      "example_questions": [
+        "Why do I need a catheter?",
+        "I can't empty my bladder"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "mastitis",
+      "title": "Breast inflammation and possible infection",
+      "stage": "complication",
+      "source_ids": [
+        "HF10",
+        "HF09"
+      ],
+      "example_questions": [
+        "My breast is red and painful",
+        "What is mastitis?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "gestational-diabetes-followup",
+      "title": "After a pregnancy with gestational diabetes",
+      "stage": "complication",
+      "source_ids": [
+        "HF11"
+      ],
+      "example_questions": [
+        "Do I still have diabetes?",
+        "When do I need another sugar test?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "heart-symptoms",
+      "title": "Heart and breathing symptoms after birth",
+      "stage": "complication",
+      "source_ids": [
+        "HF14",
+        "HF15",
+        "N01"
+      ],
+      "example_questions": [
+        "Why am I short of breath?",
+        "What is postpartum cardiomyopathy?"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "mental-health-treatment",
+      "title": "Depression, anxiety and getting treatment",
+      "stage": "complication",
+      "source_ids": [
+        "HF07",
+        "N09"
+      ],
+      "example_questions": [
+        "What treatment is available for postpartum depression?",
+        "My anxiety is stopping me sleeping"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "urgent-maternal",
+      "title": "Get help now: maternal warning signs",
+      "stage": "urgent",
+      "source_ids": [
+        "N01",
+        "N08"
+      ],
+      "example_questions": [
+        "I'm bleeding heavily and feel faint",
+        "My chest hurts",
+        "I have a severe headache and blurry vision"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "urgent-baby",
+      "title": "Get help now: newborn warning signs",
+      "stage": "urgent",
+      "source_ids": [
+        "N07",
+        "CW02"
+      ],
+      "example_questions": [
+        "My newborn has a fever",
+        "My baby is blue",
+        "I can't wake my baby"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    },
+    {
+      "id": "pregnancy-loss-trauma",
+      "title": "Support after a frightening birth or loss",
+      "stage": "hospital_and_home",
+      "source_ids": [
+        "UM01",
+        "HF07"
+      ],
+      "example_questions": [
+        "I keep reliving the birth",
+        "We experienced a loss"
+      ],
+      "publication_status": "research_outline_requires_clinical_review",
+      "answer_mode": "reviewed_static_page_only"
+    }
+  ],
+  "product_requirements": {
+    "consumer_app": true,
+    "medical_system_connection_required": false,
+    "features": [
+      "Help me ask my nurse",
+      "Explain uploaded discharge instructions",
+      "Store photos and documents",
+      "Personal voice notes with optional AI organization and reviewed related information",
+      "Nearby pediatrician and postpartum-care search"
+    ],
+    "design_direction": "Image first, short summaries, more detail on demand; essential safety and instruction details stay visible.",
+    "design_brief": "postpartum-product-design-brief.md",
+    "status": "requirements_only_not_implemented"
+  }
+}

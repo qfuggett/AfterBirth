@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AskRouteImport } from './routes/ask'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SourcesRouteImport } from './routes/sources'
+import { Route as SupportRouteImport } from './routes/support'
+import { Route as CareIndexRouteImport } from './routes/care.index'
+import { Route as CareResourceIdRouteImport } from './routes/care.$resourceId'
+import { Route as CareNewRouteImport } from './routes/care.new'
+import { Route as QuestionsIndexRouteImport } from './routes/questions.index'
+import { Route as QuestionsQuestionIdRouteImport } from './routes/questions.$questionId'
+import { Route as QuestionsNewRouteImport } from './routes/questions.new'
+import { Route as SectionsSectionIdRouteImport } from './routes/sections.$sectionId'
+import { Route as TopicsTopicIdRouteImport } from './routes/topics.$topicId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AskRoute = AskRouteImport.update({
+  id: '/ask',
+  path: '/ask',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SourcesRoute = SourcesRouteImport.update({
+  id: '/sources',
+  path: '/sources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareIndexRoute = CareIndexRouteImport.update({
+  id: '/care/',
+  path: '/care/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareResourceIdRoute = CareResourceIdRouteImport.update({
+  id: '/care/$resourceId',
+  path: '/care/$resourceId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareNewRoute = CareNewRouteImport.update({
+  id: '/care/new',
+  path: '/care/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionsIndexRoute = QuestionsIndexRouteImport.update({
+  id: '/questions/',
+  path: '/questions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionsQuestionIdRoute = QuestionsQuestionIdRouteImport.update({
+  id: '/questions/$questionId',
+  path: '/questions/$questionId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionsNewRoute = QuestionsNewRouteImport.update({
+  id: '/questions/new',
+  path: '/questions/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectionsSectionIdRoute = SectionsSectionIdRouteImport.update({
+  id: '/sections/$sectionId',
+  path: '/sections/$sectionId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TopicsTopicIdRoute = TopicsTopicIdRouteImport.update({
+  id: '/topics/$topicId',
+  path: '/topics/$topicId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ask': typeof AskRoute
+  '/help': typeof HelpRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
+  '/care/$resourceId': typeof CareResourceIdRoute
+  '/care/new': typeof CareNewRoute
+  '/questions/$questionId': typeof QuestionsQuestionIdRoute
+  '/questions/new': typeof QuestionsNewRoute
+  '/sections/$sectionId': typeof SectionsSectionIdRoute
+  '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/care/': typeof CareIndexRoute
+  '/questions/': typeof QuestionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ask': typeof AskRoute
+  '/help': typeof HelpRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
+  '/care/$resourceId': typeof CareResourceIdRoute
+  '/care/new': typeof CareNewRoute
+  '/questions/$questionId': typeof QuestionsQuestionIdRoute
+  '/questions/new': typeof QuestionsNewRoute
+  '/sections/$sectionId': typeof SectionsSectionIdRoute
+  '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/care': typeof CareIndexRoute
+  '/questions': typeof QuestionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/ask': typeof AskRoute
+  '/help': typeof HelpRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
+  '/care/$resourceId': typeof CareResourceIdRoute
+  '/care/new': typeof CareNewRoute
+  '/questions/$questionId': typeof QuestionsQuestionIdRoute
+  '/questions/new': typeof QuestionsNewRoute
+  '/sections/$sectionId': typeof SectionsSectionIdRoute
+  '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/care/': typeof CareIndexRoute
+  '/questions/': typeof QuestionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/ask'
+    | '/help'
+    | '/settings'
+    | '/sources'
+    | '/support'
+    | '/care/$resourceId'
+    | '/care/new'
+    | '/questions/$questionId'
+    | '/questions/new'
+    | '/sections/$sectionId'
+    | '/topics/$topicId'
+    | '/care/'
+    | '/questions/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/ask'
+    | '/help'
+    | '/settings'
+    | '/sources'
+    | '/support'
+    | '/care/$resourceId'
+    | '/care/new'
+    | '/questions/$questionId'
+    | '/questions/new'
+    | '/sections/$sectionId'
+    | '/topics/$topicId'
+    | '/care'
+    | '/questions'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/ask'
+    | '/help'
+    | '/settings'
+    | '/sources'
+    | '/support'
+    | '/care/$resourceId'
+    | '/care/new'
+    | '/questions/$questionId'
+    | '/questions/new'
+    | '/sections/$sectionId'
+    | '/topics/$topicId'
+    | '/care/'
+    | '/questions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AskRoute: typeof AskRoute
+  HelpRoute: typeof HelpRoute
+  SettingsRoute: typeof SettingsRoute
+  SourcesRoute: typeof SourcesRoute
+  SupportRoute: typeof SupportRoute
+  CareResourceIdRoute: typeof CareResourceIdRoute
+  CareNewRoute: typeof CareNewRoute
+  QuestionsQuestionIdRoute: typeof QuestionsQuestionIdRoute
+  QuestionsNewRoute: typeof QuestionsNewRoute
+  SectionsSectionIdRoute: typeof SectionsSectionIdRoute
+  TopicsTopicIdRoute: typeof TopicsTopicIdRoute
+  CareIndexRoute: typeof CareIndexRoute
+  QuestionsIndexRoute: typeof QuestionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +234,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ask': {
+      id: '/ask'
+      path: '/ask'
+      fullPath: '/ask'
+      preLoaderRoute: typeof AskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sources': {
+      id: '/sources'
+      path: '/sources'
+      fullPath: '/sources'
+      preLoaderRoute: typeof SourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/care/': {
+      id: '/care/'
+      path: '/care'
+      fullPath: '/care/'
+      preLoaderRoute: typeof CareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/care/$resourceId': {
+      id: '/care/$resourceId'
+      path: '/care/$resourceId'
+      fullPath: '/care/$resourceId'
+      preLoaderRoute: typeof CareResourceIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/care/new': {
+      id: '/care/new'
+      path: '/care/new'
+      fullPath: '/care/new'
+      preLoaderRoute: typeof CareNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questions/': {
+      id: '/questions/'
+      path: '/questions'
+      fullPath: '/questions/'
+      preLoaderRoute: typeof QuestionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questions/$questionId': {
+      id: '/questions/$questionId'
+      path: '/questions/$questionId'
+      fullPath: '/questions/$questionId'
+      preLoaderRoute: typeof QuestionsQuestionIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questions/new': {
+      id: '/questions/new'
+      path: '/questions/new'
+      fullPath: '/questions/new'
+      preLoaderRoute: typeof QuestionsNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sections/$sectionId': {
+      id: '/sections/$sectionId'
+      path: '/sections/$sectionId'
+      fullPath: '/sections/$sectionId'
+      preLoaderRoute: typeof SectionsSectionIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/topics/$topicId': {
+      id: '/topics/$topicId'
+      path: '/topics/$topicId'
+      fullPath: '/topics/$topicId'
+      preLoaderRoute: typeof TopicsTopicIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AskRoute: AskRoute,
+  HelpRoute: HelpRoute,
+  SettingsRoute: SettingsRoute,
+  SourcesRoute: SourcesRoute,
+  SupportRoute: SupportRoute,
+  CareResourceIdRoute: CareResourceIdRoute,
+  CareNewRoute: CareNewRoute,
+  QuestionsQuestionIdRoute: QuestionsQuestionIdRoute,
+  QuestionsNewRoute: QuestionsNewRoute,
+  SectionsSectionIdRoute: SectionsSectionIdRoute,
+  TopicsTopicIdRoute: TopicsTopicIdRoute,
+  CareIndexRoute: CareIndexRoute,
+  QuestionsIndexRoute: QuestionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
