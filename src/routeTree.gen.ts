@@ -10,14 +10,23 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as AskRouteImport } from './routes/ask'
 import { Route as HelpRouteImport } from './routes/help'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SourcesRouteImport } from './routes/sources'
+import { Route as SupportRouteImport } from './routes/support'
 import { Route as SectionsSectionIdRouteImport } from './routes/sections.$sectionId'
 import { Route as TopicsTopicIdRouteImport } from './routes/topics.$topicId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AskRoute = AskRouteImport.update({
@@ -28,6 +37,21 @@ const AskRoute = AskRouteImport.update({
 const HelpRoute = HelpRouteImport.update({
   id: '/help',
   path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SourcesRoute = SourcesRouteImport.update({
+  id: '/sources',
+  path: '/sources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SectionsSectionIdRoute = SectionsSectionIdRouteImport.update({
@@ -43,45 +67,82 @@ const TopicsTopicIdRoute = TopicsTopicIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/ask': typeof AskRoute
   '/help': typeof HelpRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/ask': typeof AskRoute
   '/help': typeof HelpRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/ask': typeof AskRoute
   '/help': typeof HelpRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/ask' | '/help' | '/sections/$sectionId' | '/topics/$topicId'
+    | '/'
+    | '/about'
+    | '/ask'
+    | '/help'
+    | '/settings'
+    | '/sources'
+    | '/support'
+    | '/sections/$sectionId'
+    | '/topics/$topicId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ask' | '/help' | '/sections/$sectionId' | '/topics/$topicId'
+  to:
+    | '/'
+    | '/about'
+    | '/ask'
+    | '/help'
+    | '/settings'
+    | '/sources'
+    | '/support'
+    | '/sections/$sectionId'
+    | '/topics/$topicId'
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/ask'
     | '/help'
+    | '/settings'
+    | '/sources'
+    | '/support'
     | '/sections/$sectionId'
     | '/topics/$topicId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AskRoute: typeof AskRoute
   HelpRoute: typeof HelpRoute
+  SettingsRoute: typeof SettingsRoute
+  SourcesRoute: typeof SourcesRoute
+  SupportRoute: typeof SupportRoute
   SectionsSectionIdRoute: typeof SectionsSectionIdRoute
   TopicsTopicIdRoute: typeof TopicsTopicIdRoute
 }
@@ -93,6 +154,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ask': {
@@ -107,6 +175,27 @@ declare module '@tanstack/react-router' {
       path: '/help'
       fullPath: '/help'
       preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sources': {
+      id: '/sources'
+      path: '/sources'
+      fullPath: '/sources'
+      preLoaderRoute: typeof SourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sections/$sectionId': {
@@ -128,8 +217,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AskRoute: AskRoute,
   HelpRoute: HelpRoute,
+  SettingsRoute: SettingsRoute,
+  SourcesRoute: SourcesRoute,
+  SupportRoute: SupportRoute,
   SectionsSectionIdRoute: SectionsSectionIdRoute,
   TopicsTopicIdRoute: TopicsTopicIdRoute,
 }
