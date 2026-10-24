@@ -19,9 +19,12 @@ export type PageOcr = {
 
 export type ResourcePage = {
   id: string;
+  /** The original file, never modified. */
   blob: Blob;
   mime: string;
   name: string;
+  /** Optional rotated/cropped copy used for display and text reading. */
+  edited?: Blob;
   ocr?: PageOcr;
   /** Text after the person reviewed and corrected it. */
   checkedText?: string;
