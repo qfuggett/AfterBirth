@@ -76,7 +76,7 @@ export function CropDialog({
           <label htmlFor="zoom" className="text-[0.95rem] font-semibold">
             Zoom
           </label>
-          <Slider id="zoom" min={1} max={4} step={0.05} value={[zoom]} onValueChange={(v) => setZoom(v[0])} className="flex-1" />
+          <Slider id="zoom" min={1} max={4} step={0.05} value={[zoom]} onValueChange={(v) => setZoom(v[0] ?? 1)} className="flex-1" />
           <Button variant="outline" size="sm" onClick={() => setRotation((r) => (r + 90) % 360)}>
             <RotateCw aria-hidden /> Rotate
           </Button>

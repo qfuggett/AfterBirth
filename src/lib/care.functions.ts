@@ -87,8 +87,8 @@ async function resolveLocation(place?: string, coords?: { lat: number; lng: numb
   }
   const m = p.match(/^([a-zA-Z .'-]{2,}),\s*([a-zA-Z]{2})$/);
   if (m) {
-    const city = m[1].trim();
-    const state = m[2].toUpperCase();
+    const city = (m[1] ?? "").trim();
+    const state = (m[2] ?? "").toUpperCase();
     const r = await fetch(`https://api.zippopotam.us/us/${state.toLowerCase()}/${encodeURIComponent(city.toLowerCase())}`, {
       signal: AbortSignal.timeout(8000),
     });

@@ -76,13 +76,13 @@ function NewResource() {
       const j = i + d;
       if (j < 0 || j >= p.length) return p;
       const c = [...p];
-      [c[i], c[j]] = [c[j], c[i]];
+      [c[i], c[j]] = [c[j]!, c[i]!];
       return c;
     });
 
   const rotate = async (i: number) => {
     const p = pages[i];
-    if (!p.mime.startsWith("image/") || p.mime.includes("hei")) return;
+    if (!p || !p.mime.startsWith("image/") || p.mime.includes("hei")) return;
     const edited = await transformImage(p.edited ?? p.blob, 90);
     setPages((ps) => ps.map((x, k) => (k === i ? { ...x, edited } : x)));
   };

@@ -8,7 +8,7 @@ export type DocFlag = {
   kind: "unreadable-dose" | "low-confidence" | "missing-pages" | "no-text";
   page: number | null;
   message: string;
-  context?: string;
+  context?: string | undefined;
 };
 
 const UNIT = /^(mg|mcg|µg|ug|ml|mL|g|units?|iu|tabs?|tablets?|caps?|capsules?|puffs?|drops?)\.?$/i;

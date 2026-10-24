@@ -107,7 +107,7 @@ function ResourceDetail({ resource }: { resource: Resource }) {
     const nextTexts = [...texts];
     try {
       for (let i = 0; i < pages.length; i++) {
-        const p = pages[i];
+        const p = pages[i]!;
         if (!p.mime.startsWith("image/") || p.mime.includes("hei")) continue;
         setReading({ page: i + 1, progress: 0 });
         const ocr = await readImageText(p.edited ?? p.blob, (progress) => setReading({ page: i + 1, progress }));

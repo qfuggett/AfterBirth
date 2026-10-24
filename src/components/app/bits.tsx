@@ -37,7 +37,7 @@ const ORIGIN: Record<Origin, { label: string; icon: typeof FileText; cls: string
   template: { label: "Suggested template", icon: BookOpenCheck, cls: "bg-sage-soft text-secondary-foreground" },
 };
 
-export function OriginTag({ origin, detail, className }: { origin: Origin; detail?: string; className?: string }) {
+export function OriginTag({ origin, detail, className }: { origin: Origin; detail?: string | undefined; className?: string }) {
   const o = ORIGIN[origin];
   const Icon = o.icon;
   return (
