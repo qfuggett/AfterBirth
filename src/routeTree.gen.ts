@@ -16,6 +16,7 @@ import { Route as HelpRouteImport } from './routes/help'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as SupportRouteImport } from './routes/support'
+import { Route as CareIndexRouteImport } from './routes/care.index'
 import { Route as QuestionsIndexRouteImport } from './routes/questions.index'
 import { Route as QuestionsQuestionIdRouteImport } from './routes/questions.$questionId'
 import { Route as QuestionsNewRouteImport } from './routes/questions.new'
@@ -57,6 +58,11 @@ const SupportRoute = SupportRouteImport.update({
   path: '/support',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CareIndexRoute = CareIndexRouteImport.update({
+  id: '/care/',
+  path: '/care/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QuestionsIndexRoute = QuestionsIndexRouteImport.update({
   id: '/questions/',
   path: '/questions/',
@@ -95,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/care/': typeof CareIndexRoute
   '/questions/': typeof QuestionsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -109,6 +116,7 @@ export interface FileRoutesByTo {
   '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/care': typeof CareIndexRoute
   '/questions': typeof QuestionsIndexRoute
 }
 export interface FileRoutesById {
@@ -124,6 +132,7 @@ export interface FileRoutesById {
   '/questions/new': typeof QuestionsNewRoute
   '/sections/$sectionId': typeof SectionsSectionIdRoute
   '/topics/$topicId': typeof TopicsTopicIdRoute
+  '/care/': typeof CareIndexRoute
   '/questions/': typeof QuestionsIndexRoute
 }
 export interface FileRouteTypes {
@@ -140,6 +149,7 @@ export interface FileRouteTypes {
     | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
+    | '/care/'
     | '/questions/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
     | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
+    | '/care'
     | '/questions'
   id:
     | '__root__'
@@ -168,6 +179,7 @@ export interface FileRouteTypes {
     | '/questions/new'
     | '/sections/$sectionId'
     | '/topics/$topicId'
+    | '/care/'
     | '/questions/'
   fileRoutesById: FileRoutesById
 }
@@ -183,6 +195,7 @@ export interface RootRouteChildren {
   QuestionsNewRoute: typeof QuestionsNewRoute
   SectionsSectionIdRoute: typeof SectionsSectionIdRoute
   TopicsTopicIdRoute: typeof TopicsTopicIdRoute
+  CareIndexRoute: typeof CareIndexRoute
   QuestionsIndexRoute: typeof QuestionsIndexRoute
 }
 
@@ -237,6 +250,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SupportRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/care/': {
+      id: '/care/'
+      path: '/care'
+      fullPath: '/care/'
+      preLoaderRoute: typeof CareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/questions/': {
       id: '/questions/'
       path: '/questions'
@@ -287,6 +307,7 @@ const rootRouteChildren: RootRouteChildren = {
   QuestionsNewRoute: QuestionsNewRoute,
   SectionsSectionIdRoute: SectionsSectionIdRoute,
   TopicsTopicIdRoute: TopicsTopicIdRoute,
+  CareIndexRoute: CareIndexRoute,
   QuestionsIndexRoute: QuestionsIndexRoute,
 }
 export const routeTree = rootRouteImport
