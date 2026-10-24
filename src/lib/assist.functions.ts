@@ -21,7 +21,7 @@ async function failFrom(e: unknown): Promise<Fail> {
 // ---------- Explain discharge instructions ----------
 
 export const explainDocument = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z
       .object({
         owner: z.enum(["parent", "baby"]),
@@ -61,7 +61,7 @@ JSON:`;
 // ---------- Organize a voice note ----------
 
 export const organizeNote = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => z.object({ transcript: z.string().trim().min(5).max(8000) }).parse(d))
+  .validator((d: unknown) => z.object({ transcript: z.string().trim().min(5).max(8000) }).parse(d))
   .handler(async ({ data }): Promise<{ ok: true; note: OrganizedNote; model: string } | Fail> => {
     const { callGemma, extractJson } = await import("./gemma.server");
     const topicList = TOPICS.filter((t) => t.stage !== "urgent")
@@ -99,7 +99,7 @@ JSON:`;
 // ---------- Word a question for the nurse ----------
 
 export const wordQuestion = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) =>
+  .validator((d: unknown) =>
     z.object({ concern: z.string().max(80), facts: z.string().trim().min(3).max(500) }).parse(d),
   )
   .handler(async ({ data }): Promise<{ ok: true; question: string; model: string } | Fail> => {

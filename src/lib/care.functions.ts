@@ -224,7 +224,7 @@ async function searchPlaces(apiKey: string, cat: NonNullable<ReturnType<typeof g
 }
 
 export const searchCare = createServerFn({ method: "POST" })
-  .inputValidator((d: unknown) => input.parse(d))
+  .validator((d: unknown) => input.parse(d))
   .handler(async ({ data }): Promise<CareSearchResponse> => {
     const cat = getCategory(data.categoryId);
     if (!cat) return { ok: false, reason: "bad_input", message: "Unknown care type." };
